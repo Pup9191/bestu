@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>For You 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins",system-ui,sans-serif;}
+body{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at top left,#ffe0f0,#fdfbff);padding:20px;
+}
+.card{
+  background:#ffffffee;border-radius:24px;box-shadow:0 18px 40px rgba(0,0,0,.12);
+  max-width:480px;width:100%;padding:28px 24px;text-align:center;position:relative;overflow:hidden;
+}
+h1{font-size:26px;color:#2b1641;margin-bottom:4px;}
+.sub-line{font-size:12px;color:#a15d83;margin-bottom:12px;font-style:italic;}
+.subtext{font-size:14px;color:#705b86;margin-bottom:20px;line-height:1.6;}
+.pill-box{background:#f9f4ff;border-radius:18px;padding:12px 14px;display:flex;align-items:center;
+  gap:10px;font-size:13px;color:#4f3b70;margin-bottom:16px;border:1px dashed #dec7ff;}
+.section-title{font-size:14px;font-weight:600;margin-bottom:8px;color:#3a234f;text-align:left;}
+ul{list-style:none;margin-bottom:16px;text-align:left;}
+li{font-size:13px;color:#5b476f;margin-bottom:6px;display:flex;gap:8px;}
+.quote-box{background:linear-gradient(120deg,#ffeaf5,#fdf5ff);border-radius:16px;padding:10px 12px;
+  font-size:12px;color:#63436e;margin-bottom:18px;border:1px solid #ffd0eb;}
+/* GIFT */
+.gift-box{
+  background:linear-gradient(145deg,#ff9ec4,#ff6fa4);border-radius:20px;padding:16px;
+  color:#fff;font-weight:600;display:inline-block;cursor:pointer;box-shadow:0 8px 18px rgba(255,111,164,.4);
+  transition:transform .2s ease,box-shadow .2s ease;position:relative;
+}
+.gift-box:hover{transform:scale(1.05);}
+.gift-box::after{
+  content:"✨";position:absolute;right:-8px;top:-8px;font-size:18px;animation:twinkle 2s infinite;
+}
+@keyframes twinkle{0%,100%{opacity:.2;}50%{opacity:1;}}
+/* FLOAT HEARTS */
+@keyframes floatUp{
+  0%{transform:translateY(0) scale(1);opacity:1;}
+  100%{transform:translateY(-120px) scale(1.4);opacity:0;}
+}
+.heart-float{
+  position:absolute;left:50%;font-size:20px;opacity:0;
+  animation:floatUp 2s ease-out forwards;
+}
+.shayri-hidden{
+  display:none;margin-top:16px;background:#fff4fb;border-radius:16px;padding:12px 14px;font-size:14px;
+  color:#5b2a5e;line-height:1.6;font-weight:500;border:1px solid #ffc3df;
+  animation:fadeShayri 1.5s ease-in-out;
+}
+@keyframes fadeShayri{0%{opacity:0;transform:translateY(10px);}100%{opacity:1;transform:translateY(0);}}
+.buttons{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px;}
+button{border:none;border-radius:999px;padding:9px 16px;font-size:13px;cursor:pointer;transition:transform .12s ease;}
+button:active{transform:scale(.96);}
+.btn-main{background:linear-gradient(135deg,#ff6fa4,#ff9cbb);color:#fff;box-shadow:0 10px 20px rgba(255,111,164,.4);font-weight:600;}
+.btn-ghost{background:#fff4fb;color:#c2155a;border:1px solid #ffc3df;font-weight:500;}
+.tiny-note{font-size:11px;margin-top:12px;color:#8a6a9b;text-align:right;}
+#startMusic{
+  position:fixed;bottom:12px;left:50%;transform:translateX(-50%);
+  background:#ff7bb0;color:white;border:none;border-radius:30px;padding:10px 20px;
+  font-size:14px;cursor:pointer;box-shadow:0 6px 12px rgba(255,111,164,.4);
+  animation:pulse 2s infinite;max-width:420px;width:calc(100% - 40px);text-align:center;
+}
+@keyframes pulse{0%,100%{transform:translateX(-50%) scale(1);}50%{transform:translateX(-50%) scale(1.07);}}
+@media(max-width:520px){
+  .card{padding:22px 16px;}h1{font-size:22px;}.subtext{font-size:13px;}li{font-size:12px;}button{width:100%;}
+}
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Hey Bestu 💕</h1>
+  <div class="sub-line">(ha web page fakta majhya bestusathi aahe 👀)</div>
+
+  <p class="subtext">
+    This little space is just for you —  
+    to remind you that even on heavy, moody, or tiring days,  
+    you’re doing more than enough. 🌷  
+    Take a breath, sip something warm, and just be.
+  </p>
+
+  <div class="pill-box">🍫 Here’s some virtual chocolate and a cozy hug 🤗</div>
+
+  <p class="section-title">Mini Period Survival Kit 🩷</p>
+  <ul>
+    <li>🛌 Permission to rest fully. The world can wait.</li>
+    <li>☕ Warm drink = warm soul.</li>
+    <li>🎧 Soft music to calm the mind.</li>
+    <li>💬 You are cared for more than you know. 💖</li>
+  </ul>
+
+  <div class="quote-box"><strong>Reminder:</strong> You don’t have to be okay all the time.  
+    Someone believes in you and cares — always. 💫</div>
+
+  <!-- Gift -->
+  <div class="gift-box" id="giftBtn">🎁 Tap to Open a Magical Surprise</div>
+  <div class="shayri-hidden" id="shayriBox">
+    💖 Period cha divas ahet, tension nako gheu,<br>
+    Dard zhala tari pan smile nako thevu.<br>
+    Mi aahe na, tujhyasathi hamesha ready,<br>
+    Thoda rest ghe, ani kar ek smile steady. 🌸
+  </div>
+
+  <div class="buttons">
+    <button class="btn-main" id="hugBtn">🤗 Tap for a Hug</button>
+    <button class="btn-ghost" id="complimentBtn">✨ Tap for a Compliment</button>
+  </div>
+
+  <div class="tiny-note">Made with ❤️ by Prathamesh</div>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup" style="display:none;align-items:center;justify-content:center;
+background:rgba(0,0,0,0.5);position:fixed;inset:0;">
+  <div class="popup-inner" style="background:white;padding:20px;border-radius:20px;max-width:300px;text-align:center;">
+    <h2>💌 From Someone Who Cares</h2>
+    <p id="popupText"></p>
+    <button class="btn-main" id="closePopup">Got it 💕</button>
+  </div>
+</div>
+
+<!-- 🔊 Local background music -->
+<audio id="bgMusic" loop>
+  <source src="bg-music.mp3" type="audio/mpeg">
+  <!-- If it doesn't play, check: file name = bg-music.mp3 and in same folder as this HTML -->
+</audio>
+
+<button id="startMusic">🎵 Tap to Start Music</button>
+
+<script>
+// Gift reveal with hearts
+const giftBtn=document.getElementById("giftBtn");
+const shayriBox=document.getElementById("shayriBox");
+giftBtn.addEventListener("click",()=>{
+  giftBtn.style.animation="shake .5s";
+  setTimeout(()=>{giftBtn.style.animation="none";},600);
+  for(let i=0;i<8;i++){
+    const h=document.createElement("div");
+    h.textContent="💖";
+    h.className="heart-float";
+    h.style.left=Math.random()*80+10+"%";
+    h.style.bottom="10px";
+    h.style.animationDelay=(i*0.1)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),1800);
+  }
+  setTimeout(()=>{
+    shayriBox.style.display="block";
+    giftBtn.style.display="none";
+  },600);
+});
+const style=document.createElement('style');
+style.innerHTML="@keyframes shake{0%,100%{transform:translate(0);}25%{transform:translate(3px);}50%{transform:translate(-3px);}75%{transform:translate(3px);}}";
+document.head.appendChild(style);
+
+// Music
+const music=document.getElementById("bgMusic");
+const startMusic=document.getElementById("startMusic");
+startMusic.addEventListener("click",()=>{
+  music.play().catch(()=>{alert('Music could not start. Check bg-music.mp3 file & volume.');});
+  startMusic.style.display="none";
+});
+
+// Popup + buttons
+const popup=document.getElementById("popup");
+const popupText=document.getElementById("popupText");
+const hugBtn=document.getElementById("hugBtn");
+const complimentBtn=document.getElementById("complimentBtn");
+const closePopup=document.getElementById("closePopup");
+const compliments=[
+  "You radiate kindness and calm. 🌸",
+  "Even your tired version is lovable. 💕",
+  "Your smile could cure any bad day. ✨",
+  "You make simple moments magical. 💫",
+  "You are enough — always have been. 🌷"
+];
+hugBtn.onclick=()=>{popupText.textContent="A soft, warm, virtual hug just for you 🤗 — imagine being held gently, no words, just calm and care.";popup.style.display="flex";};
+complimentBtn.onclick=()=>{popupText.textContent=compliments[Math.floor(Math.random()*compliments.length)];popup.style.display="flex";};
+closePopup.onclick=()=>popup.style.display="none";
+popup.onclick=e=>{if(e.target===popup)popup.style.display="none";};
+</script>
+</body>
+</html>
